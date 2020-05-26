@@ -9,6 +9,17 @@
         {{else}}
         <p> Аватара нет</p>
         {{/if}}
+
+         <div class="file-field input-field">
+                <div class="btn">
+                    <span>Сменить аватар</span>
+                    <input type="file" name="avatar">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+
     </div>
 
     <div class="col s6">
@@ -21,15 +32,7 @@
                 <span class="helper-text" data-error="Имя не может быть пустым"></span>
             </div>
 
-            <div class="file-field input-field">
-                <div class="btn">
-                    <span>Аватар</span>
-                    <input type="file" name="avatar">
-                </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text">
-                </div>
-            </div>
+           
 
             <input name="_csrf" type="hidden" value="{{csrf}}">
 
