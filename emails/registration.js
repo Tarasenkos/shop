@@ -7,10 +7,10 @@ module.exports = function(email, name) {
         subject: 'Аккаунт создан',
         html: `
          <h1>Добро пожаловать, ${name}! </h1>
-         <p>Вы успешно создали аккаунт с email ${email}</p>
+         <p>Вы успешно создали аккаунт с e-mail ${email}</p>
          <hr/>
 
-         <a href="${keys.BASE_URL}">Магазин</a>
+         <a href="${keys.BASE_URL}"> Shop4U</a>
 
         
         `

@@ -1,4 +1,4 @@
-<h1>Добавить новый курс</h1>
+<h1>Добавить новый товар</h1>
 
 {{#if error}}
     <p class="alert">{{error}}</p>
@@ -9,13 +9,13 @@
 <form action="/add" method="POST" novalidate >
 <div class="input-field">
     <input id="title" name="title" type="text" class="validate" required value = "{{data.title}}">
-    <label for="title">Название курса</label>
+    <label for="title">Название товара</label>
     <span class="helper-text" data-error="Введите название" ></span>
 </div>
 
 <div class="input-field">
     <input id="price" name="price" type="number" class="validate" required min="1" value = "{{data.price}}">
-    <label for="price">Цена курса</label>
+    <label for="price">Цена товара</label>
     <span class="helper-text" data-error="Введите цену" ></span>
 </div>
 
@@ -27,7 +27,7 @@
 
 <input name="_csrf" type="hidden" value="{{csrf}}">
 
-<button type="submit" class="btn btn-primary">Добавить курс</button>
+<button type="submit" class="btn btn-primary">Добавить</button>
 
 
 

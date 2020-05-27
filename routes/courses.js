@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
         const courses = await Course.find().populate('userId', 'email name')
 
         res.render('courses', {
-            title: 'Курсы',
+            title: 'Товары',
             isCourses: true,
             userId: req.user ? req.user._id.toString() : null,
             courses,
@@ -99,7 +99,7 @@ router.get('/:id', async (req, res) => {
         const course = await Course.findById(req.params.id)
         res.render('course', {
             layout: 'empty',
-            title: `Курс ${course.title}`,
+            title: `Товар ${course.title}`,
             course
         })
 

@@ -1,8 +1,8 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
-      <a href="/" class="brand-logo">Из рук в руки</a>
-      <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <a href="/" class="brand-logo">Shop4U</a>
+      <a href="" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
       <ul id="nav-mobile" class="right hide-on-med-and-down">
 
@@ -62,16 +62,56 @@
   </nav>
 
   <ul class="sidenav" id="mobile">
-    <li><a href="/">Главная</a></li>
-    <li><a href="/courses">Товары</a></li>
-    <li><a href="/add">Добавить свой товар</a></li>
-    <li><a href="/cart">Корзина</a></li>
-    <li><a href="/orders">Заказы</a></li>
-    <li><a href="/profile">{{user.name}}</a></li>
-    <li><a href="/auth/logout">Выйти</a></li>
+    {{#if isHome}}
+        <li class="active"><a href="/">Главная</a></li>
+        {{else}}
+        <li><a href="/">Главная</a></li>
+        {{/if}}
+
+        {{#if isCourses}}
+        <li class="active"><a href="/courses">Товары</a></li>
+        {{else}}
+        <li><a href="/courses">Товары</a></li>
+        {{/if}}
+
+        {{#if isAuth}}
+
+        {{#if isAdd}}
+        <li class="active"><a href="/add">Добавить свой товар</a></li>
+        {{else}}
+        <li><a href="/add">Добавить свой товар</a></li>
+        {{/if}}
+
+        {{#if isCart}}
+        <li class="active"><a href="/cart">Корзина</a></li>
+        {{else}}
+        <li><a href="/cart">Корзина</a></li>
+        {{/if}}
+
+        {{#if isOrder}}
+        <li class="active"><a href="/orders">Заказы</a></li>
+        {{else}}
+        <li><a href="/orders">Заказы</a></li>
+        {{/if}}
+
+        {{#if isProfile}}
+        <li class="active"><a href="/profile">{{user.name}}</a></li>
+        {{else}}
+        <li><a href="/profile">{{user.name}}</a></li>
+        {{/if}}
+
+        <li><a href="/auth/logout">Выйти</a></li>
+
+        {{else}}
+
+        {{#if isLogin}}
+        <li class="active"><a href="/auth/login#login">Войти</a></li>
+        {{else}}
+        <li><a href="/auth/login#login">Войти</a></li>
+        {{/if}}
+
+        {{/if}}
   </ul>
 
-
-
-
 </div>
+

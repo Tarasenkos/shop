@@ -4,7 +4,7 @@ const Course = require ('../models/course')
 
 router.get('/', (req, res) => {
     res.render('add', {
-        title: 'Добавить курс',
+        title: 'Добавить товар',
         isAdd: true
     })
 
